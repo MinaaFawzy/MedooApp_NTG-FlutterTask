@@ -1,13 +1,16 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 Future<bool> checkConnection() async {
-  var connectivityResult = await Connectivity().checkConnectivity();
+  try {
+    final results = await Connectivity().checkConnectivity();
 
-  if (connectivityResult.contains(ConnectivityResult.mobile) ||
-      connectivityResult.contains(ConnectivityResult.wifi)) {
-    return true;
-  } else {
+    final hasInternet = results.contains(ConnectivityResult.mobile) ||
+        results.contains(ConnectivityResult.wifi);
+
+    return hasInternet;
+  } catch (e) {
     return false;
   }
 }
+
 

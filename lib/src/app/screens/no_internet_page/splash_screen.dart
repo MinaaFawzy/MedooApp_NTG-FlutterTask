@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:modee_e_commerce_app/src/app/screens/nav_bottom_bar/nav_bottom_bar.dart';
 import 'package:modee_e_commerce_app/src/app/screens/no_internet_page/no_internet_screen.dart';
 import 'package:modee_e_commerce_app/src/data/services/network_check.dart';
+import 'package:modee_e_commerce_app/src/data/utils/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -9,27 +10,33 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  bool? hasInternet;
+  bool? _hasInternet; // only one variable
 
   @override
   void initState() {
     super.initState();
-    _checkInternet();
+    _checkInternet(); // check at start
   }
 
-  void _checkInternet() async {
-    bool result = await checkConnection();
-    setState(() => hasInternet = result);
+  Future<void> _checkInternet() async {
+    final hasInternet = await checkConnection()
+        .timeout(const Duration(seconds: 5), onTimeout: () => false);
+
+    setState(() {
+      _hasInternet = hasInternet;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (hasInternet == null) {
+    if (_hasInternet == null) {
       return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
+        body: Center(
+          child: CircularProgressIndicator(color: AppColors.buttonColor),
+        ),
       );
-    } else if (hasInternet == true) {
-      return  BottomNavBar();
+    } else if (_hasInternet == true) {
+      return BottomNavBar();
     } else {
       return NoInternetScreen(onRetry: _checkInternet);
     }

@@ -12,7 +12,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get products => 'Products';
 
   @override
-  String get categorise => 'Categorise';
+  String get categories => 'Categories';
 
   @override
   String get change => 'Change';

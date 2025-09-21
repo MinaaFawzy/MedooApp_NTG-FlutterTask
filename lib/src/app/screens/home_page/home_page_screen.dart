@@ -30,7 +30,7 @@ class HomePageScreen extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(top:8.0),
                 child: Row(
                   children: [
                     SizedBox(
@@ -52,7 +52,7 @@ class HomePageScreen extends ConsumerWidget {
                       child: SizedBox(
                         width:
                             isSearching
-                                ? MediaQuery.of(context).size.width * 0.35
+                                ? MediaQuery.of(context).size.width * 0.43
                                 : 48,
                         child: TextField(
                           enabled: false,
@@ -86,7 +86,7 @@ class HomePageScreen extends ConsumerWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(11),
-                            margin: const EdgeInsets.only(left: 8 ,right: 8),
+                            margin: const EdgeInsets.only(left: 8 ),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
@@ -104,8 +104,8 @@ class HomePageScreen extends ConsumerWidget {
                           cartItems.isEmpty
                               ? const SizedBox()
                               : Positioned(
-                                right: 6, // adjust to move horizontally
-                                top: 6, // adjust to move vertically
+                                right: 12, // adjust to move horizontally
+                                top: 12, // adjust to move vertically
                                 child: Container(
                                   width: 8,
                                   height: 8,
@@ -130,11 +130,11 @@ class HomePageScreen extends ConsumerWidget {
                 ),
               ),
               Container(
-                height: 48,
+                height: 56,
                 margin: EdgeInsets.symmetric(vertical: 8),
                 padding: EdgeInsets.all(2),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(28),
                   border: Border.all(color: AppColors.borderColor(context), width: 1),
                 ),
                 child: Row(
@@ -150,13 +150,9 @@ class HomePageScreen extends ConsumerWidget {
                             shape: BoxShape.circle,
                             color: Color(0X1F1F1F0A),
                           ),
-                          child: Icon(
-                            Icons.location_on_outlined,
-                            color: AppColors.iconColor(context),
-                          ),
+                          child: Icon(Icons.location_on_outlined,color: AppColors.iconColor(context),)
                         ),
                         SizedBox(width: 8),
-
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -171,7 +167,6 @@ class HomePageScreen extends ConsumerWidget {
                               "Brisbane, Queensland",
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.bold,
                                 color: Color(0XFF1F1F1F),
                               ),
                             ),

@@ -45,7 +45,7 @@ class ShoppingInformationWidget extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height:8),
+          const SizedBox(height:12),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -54,6 +54,7 @@ class ShoppingInformationWidget extends StatelessWidget {
               Text("\$ ${totalPrice.toStringAsFixed(2)} "),
             ],
           ),
+          const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -61,6 +62,7 @@ class ShoppingInformationWidget extends StatelessWidget {
               const Text("\$0.00"),
             ],
           ),
+          const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

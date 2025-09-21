@@ -36,11 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.8
 
 
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon/medoo_logo.png"
-
 dev_dependencies:
   flutter_launcher_icons: ^0.14.4
   flutter_test:
@@ -56,6 +51,11 @@ dev_dependencies:
   flutter_localization: ^0.3.3
   connectivity_plus: ^7.0.0
 
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/medoo_logo.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -86,6 +86,7 @@ flutter:
     - assets/images/ShoppingBag.png
     - assets/images/
     - assets/icon/medoo_logo.png
+    - assets/images/location_icon.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -101,11 +101,11 @@ abstract class AppLocalizations {
   /// **'Products'**
   String get products;
 
-  /// No description provided for @categorise.
+  /// No description provided for @categories.
   ///
   /// In en, this message translates to:
-  /// **'Categorise'**
-  String get categorise;
+  /// **'Categories'**
+  String get categories;
 
   /// No description provided for @change.
   ///

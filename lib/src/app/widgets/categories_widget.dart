@@ -13,7 +13,8 @@ class CategoriesWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text( loc.categorise, style: TextStyle(fontSize: 20)),
+        Text( loc.categories, style: TextStyle(fontSize: 20)),
+        const SizedBox(height: 4),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.12,
           child: ListView.separated(

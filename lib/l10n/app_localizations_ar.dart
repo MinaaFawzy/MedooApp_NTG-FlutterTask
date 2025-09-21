@@ -12,7 +12,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get products => 'المنتجات';
 
   @override
-  String get categorise => 'الفئات';
+  String get categories => 'الفئات';
 
   @override
   String get change => 'تغيير';
