@@ -35,7 +35,7 @@ class HomePageScreen extends ConsumerWidget {
                       height: 33,
                       child: Row(
                         children: [
-                          Image(image: AssetImage('assets/images/logo.png')),
+                          Image(image: AssetImage('assets/images/Logo.png')),
                           SizedBox(width: 8),
                           Text('Modee', style: TextStyle(
                             fontSize: 24,
@@ -201,9 +201,9 @@ class HomePageScreen extends ConsumerWidget {
                     children: [
                       BannersWidget(
                         banners: [
-                          Image.asset('assets/images/logo.png'),
-                          Image.asset('assets/images/logo.png'),
-                          Image.asset('assets/images/logo.png'),
+                          Image.asset('assets/images/Banner1.jpg'),
+                          Image.asset('assets/images/Banner2.jpeg'),
+                          Image.asset('assets/images/Banner3.PNG'),
                         ],
                       ),
                       categories.when(
