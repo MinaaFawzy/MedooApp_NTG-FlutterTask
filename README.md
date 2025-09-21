@@ -3,9 +3,9 @@
 A mini e-commerce Flutter application built as part of a technical task.  
 The app demonstrates clean architecture, state management, API integration, localization, theming, and cart functionality.
 ## 📱 Features
-<img src="AppScreens/HomeARW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
+<img src="AppScreens/ProductDetailsD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
 <img src="AppScreens/AddToCartMessage.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/CartW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/profileDetailsW1.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
-<img src="AppScreens/ProductDetailsD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/productDetailsAR.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/CartDetailsARD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
+<img src="AppScreens/EmptyCart.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/productDetailsAR.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/CartDetailsARD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
 ### ✅ Implemented
 - **Home Page**
   - Bottom navigation bar (Home, Favorites, Cart, Profile)
@@ -41,7 +41,7 @@ The app demonstrates clean architecture, state management, API integration, loca
   - Intl (Localization)
  
 **📌 State Management Reasoning**
-  I chose Riverpod because:
+  - I chose Riverpod because:
     - It allows fine-grained control of state and dependency injection.
     - Scales better with Clean Architecture + MVVM compared to setState
 
