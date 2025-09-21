@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:modee_e_commerce_app/src/app/screens/nav_bottom_bar/nav_bottom_bar.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:modee_e_commerce_app/src/app/screens/no_internet_page/splash_screen.dart';
 import 'l10n/app_localizations.dart';
 
 
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
       ],
       // locale: const Locale('en'),
 
-      home: BottomNavBar(),
+      home: SplashScreen(),
     );
   }
 }

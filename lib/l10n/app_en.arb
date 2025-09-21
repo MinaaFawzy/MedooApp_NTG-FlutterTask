@@ -18,5 +18,11 @@
   "reviews": "Reviews",
   "noProducts": "No Products",
   "productAddedToCart": "Product added to cart",
-  "item": "Item"
+  "item": "Item",
+  "noInternetConnection": "No Internet Connection",
+  "retry": "Retry",
+  "serverReturnedEmptyResponse": "Server returned empty response",
+  "thereIsErrorWhenGettingData" : "There is Error When Getting Data",
+  "thereIsUnexpectedErrorWhenGettingData" : "There is Unexpected Error When Getting Data",
+  "error": "Error"
 }

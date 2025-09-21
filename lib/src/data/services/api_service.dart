@@ -27,9 +27,9 @@ class ApiService {
     } on DioException catch (e) {
       log("Error: ${e.response?.data}");
 
-      throw Exception("GET Error at $endpoint");
+      throw Exception("There is ERROR when getting data Please try again later" );
     } catch (e) {
-      throw Exception("Unexpected GET error at $endpoint");
+      throw Exception("There is unexpected ERROR getting data Please try again later");
     }
   }
 }

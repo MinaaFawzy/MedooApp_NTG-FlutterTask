@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
+import 'package:modee_e_commerce_app/src/app/screens/favorit_page/favorite_Screen.dart';
+import 'package:modee_e_commerce_app/src/app/screens/profile_page/profile_screen.dart';
 import 'package:modee_e_commerce_app/src/data/utils/app_colors.dart';
 import '../../di/providers/bottom_nav_bar_providers.dart';
 import '../cart_page/cart_page_screen.dart';
@@ -18,9 +20,9 @@ class BottomNavBar extends ConsumerWidget {
 
     final List<Widget> _screens = [
       HomePageScreen(),
+      FavoriteScreen(),
       CartPageScreen(),
-      CartPageScreen(),
-      CartPageScreen(),
+      ProfileScreen(),
     ];
 
     return Scaffold(

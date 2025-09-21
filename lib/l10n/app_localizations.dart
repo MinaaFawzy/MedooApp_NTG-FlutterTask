@@ -214,6 +214,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Item'**
   String get item;
+
+  /// No description provided for @noInternetConnection.
+  ///
+  /// In en, this message translates to:
+  /// **'No Internet Connection'**
+  String get noInternetConnection;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @serverReturnedEmptyResponse.
+  ///
+  /// In en, this message translates to:
+  /// **'Server returned empty response'**
+  String get serverReturnedEmptyResponse;
+
+  /// No description provided for @thereIsErrorWhenGettingData.
+  ///
+  /// In en, this message translates to:
+  /// **'There is Error When Getting Data'**
+  String get thereIsErrorWhenGettingData;
+
+  /// No description provided for @thereIsUnexpectedErrorWhenGettingData.
+  ///
+  /// In en, this message translates to:
+  /// **'There is Unexpected Error When Getting Data'**
+  String get thereIsUnexpectedErrorWhenGettingData;
+
+  /// No description provided for @error.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get error;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

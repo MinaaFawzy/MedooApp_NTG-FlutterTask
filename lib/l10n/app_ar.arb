@@ -18,5 +18,11 @@
   "reviews": "التعليقات",
   "noProducts": "لا يوجد منتجات",
   "productAddedToCart": "تم إضافة المنتج إلى العربة",
-  "item": "منتج"
+  "item": "منتج",
+  "noInternetConnection": "لا يوجد اتصال بالانترنت",
+  "retry": "إعادة المحاولة",
+  "serverReturnedEmptyResponse": "أعاد الموقع استجابة فارغة",
+  "thereIsErrorWhenGettingData": "هناك خطأ عند الحصول على البيانات",
+  "thereIsUnexpectedErrorWhenGettingData": "هناك خطأ غير متوقع عند الحصول على البيانات",
+  "error": "خطأ"
 }

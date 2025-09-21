@@ -67,4 +67,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get item => 'Item';
+
+  @override
+  String get noInternetConnection => 'No Internet Connection';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get serverReturnedEmptyResponse => 'Server returned empty response';
+
+  @override
+  String get thereIsErrorWhenGettingData => 'There is Error When Getting Data';
+
+  @override
+  String get thereIsUnexpectedErrorWhenGettingData => 'There is Unexpected Error When Getting Data';
+
+  @override
+  String get error => 'Error';
 }

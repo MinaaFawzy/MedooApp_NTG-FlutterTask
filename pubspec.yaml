@@ -54,6 +54,7 @@ dev_dependencies:
   toastification: ^3.0.3
   bottom_bar: ^2.0.5
   flutter_localization: ^0.3.3
+  connectivity_plus: ^7.0.0
 
 
   # The "flutter_lints" package below contains a set of recommended lints to

@@ -67,4 +67,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get item => 'منتج';
+
+  @override
+  String get noInternetConnection => 'لا يوجد اتصال بالانترنت';
+
+  @override
+  String get retry => 'إعادة المحاولة';
+
+  @override
+  String get serverReturnedEmptyResponse => 'أعاد الموقع استجابة فارغة';
+
+  @override
+  String get thereIsErrorWhenGettingData => 'هناك خطأ عند الحصول على البيانات';
+
+  @override
+  String get thereIsUnexpectedErrorWhenGettingData => 'هناك خطأ غير متوقع عند الحصول على البيانات';
+
+  @override
+  String get error => 'خطأ';
 }
