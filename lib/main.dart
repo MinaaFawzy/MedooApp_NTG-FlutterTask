@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:modee_e_commerce_app/src/app/screens/nav_bottom_bar/nav_bottom_bar.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'l10n/app_localizations.dart';
+
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
@@ -13,28 +16,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-      // System decides (light/dark)
       themeMode: ThemeMode.system,
-
-      // Light theme
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: Colors.white,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         ),
       ),
-
-      // Dark theme
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.black,
-        primaryColor: Colors.black,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.black,
           foregroundColor: Colors.white,
@@ -43,9 +38,19 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       title: 'Modee',
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'), // English
+        Locale('ar'), // Arabic
+      ],
+      // locale: const Locale('en'),
 
-      home:  BottomNavBar() ,
-    ) ;
+      home: BottomNavBar(),
+    );
   }
 }
-

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 import 'package:modee_e_commerce_app/src/data/utils/app_colors.dart';
 import '../../di/providers/bottom_nav_bar_providers.dart';
 import '../cart_page/cart_page_screen.dart';
@@ -11,8 +12,9 @@ class BottomNavBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final bottomIndex = ref.watch(bottomIndexProvider);
 
+    final bottomIndex = ref.watch(bottomIndexProvider);
+    final loc = AppLocalizations.of(context)!;
 
     final List<Widget> _screens = [
       HomePageScreen(),
@@ -26,7 +28,7 @@ class BottomNavBar extends ConsumerWidget {
       bottomNavigationBar: BottomBar(selectedIndex: ref.watch(bottomIndexProvider), items: <BottomBarItem>[
         BottomBarItem(
           icon: Icon(Icons.home_outlined),
-          title: Text('Home'),
+          title: Text(loc.home),
           activeColor: AppColors.buttonColor,
           activeIconColor: Colors.white ,
           activeTitleColor: Colors.white,
@@ -34,7 +36,7 @@ class BottomNavBar extends ConsumerWidget {
         ),
         BottomBarItem(
           icon: Icon(Icons.favorite_border),
-          title: Text('Favorites'),
+          title: Text(loc.favorite),
           activeColor: AppColors.buttonColor,
           activeIconColor: Colors.white ,
           activeTitleColor: Colors.white,
@@ -42,7 +44,7 @@ class BottomNavBar extends ConsumerWidget {
         ),
         BottomBarItem(
           icon: Icon(Icons.shopping_cart_outlined),
-          title: Text('Cart'),
+          title: Text(loc.cart),
           activeColor: AppColors.buttonColor,
           activeIconColor: Colors.white ,
           activeTitleColor: Colors.white,
@@ -50,7 +52,7 @@ class BottomNavBar extends ConsumerWidget {
         ),
         BottomBarItem(
           icon: Icon(Icons.person_2_outlined),
-          title: Text('Profile'),
+          title: Text(loc.profile),
           activeColor: AppColors.buttonColor,
           activeIconColor: Colors.white ,
           activeTitleColor: Colors.white,

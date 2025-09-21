@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/bottom_nav_bar_providers.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/cart_provider.dart';
 import 'package:modee_e_commerce_app/src/app/widgets/cart_item_widget.dart';
@@ -14,6 +15,7 @@ class CartPageScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final totalPrice = ref.watch(totalPriceProvider);
     final cartItems = ref.watch(cartProvider);
+    final loc = AppLocalizations.of(context)!;
 
     return Scaffold(
       body: SafeArea(
@@ -46,10 +48,7 @@ class CartPageScreen extends ConsumerWidget {
                     },
                   ),
                   Spacer(),
-                  Text(
-                    'Cart',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+                  Text( loc.cart , style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), ),
                   Spacer(),
                   GestureDetector(
                     child: Container(
@@ -71,7 +70,7 @@ class CartPageScreen extends ConsumerWidget {
             Expanded(
               child:
                   cartItems.isEmpty
-                      ? Center(child: Text('Your cart is empty'))
+                      ? Center(child: Text(loc.yourCartIsEmpty))
                       : ListView.separated(
                         separatorBuilder:
                             (context, index) => SizedBox(height: 8),

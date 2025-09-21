@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/cart_provider.dart';
 import 'package:modee_e_commerce_app/src/app/screens/cart_page/cart_page_screen.dart';
 import 'package:modee_e_commerce_app/src/app/widgets/banners_widget.dart';
@@ -14,10 +15,12 @@ class HomePageScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     final products = ref.watch(productsProvider);
     final isSearching = ref.watch(isSearchingProvider);
     final categories = ref.watch(categoriesProvider);
     final cartItems = ref.watch(cartProvider);
+    final loc = AppLocalizations.of(context)!;
 
     return Scaffold(
       body: SafeArea(
@@ -83,7 +86,7 @@ class HomePageScreen extends ConsumerWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(11),
-                            margin: const EdgeInsets.only(left: 8),
+                            margin: const EdgeInsets.only(left: 8 ,right: 8),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
@@ -158,7 +161,7 @@ class HomePageScreen extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Send To",
+                              loc.sendTo,
                               style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey,
@@ -189,7 +192,7 @@ class HomePageScreen extends ConsumerWidget {
                           vertical: 8,
                         ),
                       ),
-                      child: Text("Change"),
+                      child: Text(loc.change),
                     ),
                   ],
                 ),
@@ -224,7 +227,7 @@ class HomePageScreen extends ConsumerWidget {
                             ),
                       ),
                       SizedBox(height: 8),
-                      Text('Products', style: TextStyle(fontSize: 20)),
+                      Text( loc.products, style: TextStyle(fontSize: 20)),
                       products.when(
                         data:
                             (products) =>
@@ -240,7 +243,7 @@ class HomePageScreen extends ConsumerWidget {
                                         ),
                                         Center(
                                           child: Text(
-                                            "No Products",
+                                            loc.noProducts,
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.grey,

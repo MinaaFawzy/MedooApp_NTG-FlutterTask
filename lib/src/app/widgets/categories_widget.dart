@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 
 class CategoriesWidget extends StatelessWidget {
   const CategoriesWidget({super.key, required this.categoryList});
 
   final List<String> categoryList;
 
+
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Categories', style: TextStyle(fontSize: 20)),
+        Text( loc.categorise, style: TextStyle(fontSize: 20)),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.12,
           child: ListView.separated(

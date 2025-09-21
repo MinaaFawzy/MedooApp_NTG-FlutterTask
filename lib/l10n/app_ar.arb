@@ -1,0 +1,22 @@
+{
+  "products": "المنتجات",
+  "categorise": "الفئات",
+  "change": "تغيير",
+  "sendTo": "ارسال الى",
+  "home": "الرئيسية",
+  "cart": "العربة",
+  "profile": "الملف الشخصى",
+  "favorite": "المفضلة",
+  "yourCartIsEmpty": "العربة فارغة",
+  "checkout": "الدفع",
+  "total": "اجمالى",
+  "shippingFee": "رسوم الشحن",
+  "taxes": "الضرائب",
+  "shippingInformation": "معلومات الشحن",
+  "addToCart": "أضف إلى العربة",
+  "productDetails": "تفاصيل المنتج",
+  "reviews": "التعليقات",
+  "noProducts": "لا يوجد منتجات",
+  "productAddedToCart": "تم إضافة المنتج إلى العربة",
+  "item": "منتج"
+}

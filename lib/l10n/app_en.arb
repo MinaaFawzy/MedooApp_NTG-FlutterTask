@@ -1,0 +1,22 @@
+{
+  "products": "Products",
+  "categorise": "Categorise",
+  "change": "Change",
+  "sendTo": "Send To",
+  "home": "Home",
+  "cart": "Cart",
+  "profile": "Profile",
+  "favorite": "Favorite",
+  "yourCartIsEmpty": "Your cart is empty",
+  "checkout": "Checkout",
+  "total": "Total",
+  "shippingFee": "Shipping fee",
+  "taxes": "Taxes",
+  "shippingInformation": "Shipping information",
+  "addToCart": "Add To Cart",
+  "productDetails": "Product details",
+  "reviews": "Reviews",
+  "noProducts": "No Products",
+  "productAddedToCart": "Product added to cart",
+  "item": "Item"
+}

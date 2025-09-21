@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/cart_provider.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/home_provider.dart';
 import 'package:modee_e_commerce_app/src/data/services/toast_service.dart';
@@ -14,7 +15,9 @@ class ProductItemScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     final isFavorite = ref.watch(isFavoriteProvider);
+    final loc = AppLocalizations.of(context)!;
 
     return Scaffold(
 
@@ -45,7 +48,7 @@ class ProductItemScreen extends ConsumerWidget {
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.11,),
                   Text(
-                    'Product Details',
+                    loc.productDetails,
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Spacer(),
@@ -105,7 +108,7 @@ class ProductItemScreen extends ConsumerWidget {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  "(${product.rating.count} reviews)",
+                  "${product.rating.count} ${loc.reviews}",
                   style: TextStyle(color: Colors.grey[600]),
                 ),
               ],
@@ -117,7 +120,7 @@ class ProductItemScreen extends ConsumerWidget {
               child: ElevatedButton(
                 onPressed: () {
                   ref.read(cartProvider.notifier).addToCart(product, ref);
-                  ToastManager.showSuccess(context, 'Product added to cart');
+                  ToastManager.showSuccess(context, loc.productAddedToCart);
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
@@ -125,9 +128,9 @@ class ProductItemScreen extends ConsumerWidget {
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
-                child: const Text(
-                  "Add to Cart",
-                  style: TextStyle(fontSize: 18),
+                child: Text(
+                  loc.addToCart,
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
             ),

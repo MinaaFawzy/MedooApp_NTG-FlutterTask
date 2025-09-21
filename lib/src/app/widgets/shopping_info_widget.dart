@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 import 'package:modee_e_commerce_app/src/data/utils/app_colors.dart';
 import 'package:modee_e_commerce_app/src/domain/entities/product_model.dart';
 
@@ -14,17 +15,20 @@ class ShoppingInformationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final loc = AppLocalizations.of(context)!;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Divider(),
-          const Text(
-            "Shipping Information",
-            style: TextStyle( fontSize: 20),
+          Text(
+            loc.shippingInformation,
+            style: const TextStyle( fontSize: 20),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 4),
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
@@ -34,42 +38,42 @@ class ShoppingInformationWidget extends StatelessWidget {
             child: Row(
               children: const [
                 Image(image: AssetImage("assets/images/mastercard.png"), width: 40, height: 40),
-                SizedBox(width: 8),
+                SizedBox(width: 4),
                 Text("**** **** **** 5124"),
                 Spacer(),
                 Icon(Icons.arrow_drop_down),
               ],
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height:8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Total (${cartItems.length} Items)"),
+              Text("${loc.total} (${cartItems.length} ${loc.item})"),
 
               Text("\$ ${totalPrice.toStringAsFixed(2)} "),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text("Shipping Fee"),
-              Text("\$0.00"),
+            children: [
+              Text(loc.shippingFee),
+              const Text("\$0.00"),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text("Taxes"),
-              Text("\$0.00"),
+            children: [
+              Text(loc.taxes),
+              const Text("\$0.00"),
             ],
           ),
           const Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                "Total",
+               Text(
+                loc.total,
                 style:
                 TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
@@ -86,12 +90,12 @@ class ShoppingInformationWidget extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.buttonColor,
                     foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
-                  child: const Text("Checkout"),
+                  child: Text(loc.checkout),
                 ),
               ),
             ],

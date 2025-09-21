@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:modee_e_commerce_app/l10n/app_localizations.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/cart_provider.dart';
 import 'package:modee_e_commerce_app/src/app/di/providers/home_provider.dart';
 import 'package:modee_e_commerce_app/src/app/screens/product_details/product_details_screen.dart';
@@ -14,9 +15,11 @@ class ProductItem extends ConsumerWidget {
 
   final Product product;
 
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
+    final loc = AppLocalizations.of(context)!;
+
     return GestureDetector(
       child: Container(
         padding: EdgeInsets.all(8),
@@ -67,7 +70,7 @@ class ProductItem extends ConsumerWidget {
                     ),
                     onPressed: () {
                       ref.read(cartProvider.notifier).addToCart(product, ref);
-                      ToastManager.showSuccess(context, 'Product added to cart');
+                      ToastManager.showSuccess(context, loc.productAddedToCart );
                     },
                     icon: Icon(Icons.add_shopping_cart_outlined)
                 ),
