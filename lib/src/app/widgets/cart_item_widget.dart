@@ -60,7 +60,9 @@ class CartItemWidget extends ConsumerWidget {
                           item.isFavorite
                               ? Icons.favorite
                               : Icons.favorite_border,
-                          color:  item.isFavorite ? Colors.red : Colors.black,
+                          color: item.isFavorite
+                              ? Colors.red
+                              : Theme.of(context).iconTheme.color,
                         ),
                       ),
                       Spacer(),

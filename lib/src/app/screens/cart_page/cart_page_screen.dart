@@ -31,7 +31,7 @@ class CartPageScreen extends ConsumerWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: AppColors.borderColor,
+                          color: AppColors.borderColor(context),
                           width: 1,
                         ),
                       ),
@@ -58,7 +58,7 @@ class CartPageScreen extends ConsumerWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: AppColors.borderColor,
+                          color: AppColors.borderColor(context),
                           width: 1,
                         ),
                       ),

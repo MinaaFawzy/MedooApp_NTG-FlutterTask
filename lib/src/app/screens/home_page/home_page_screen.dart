@@ -33,7 +33,16 @@ class HomePageScreen extends ConsumerWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.3,
                       height: 33,
-                      child: Image(image: AssetImage('assets/images/logo.png')),
+                      child: Row(
+                        children: [
+                          Image(image: AssetImage('assets/images/logo.png')),
+                          SizedBox(width: 8),
+                          Text('Modee', style: TextStyle(
+                            fontSize: 24,
+                          )
+                          )
+                        ],
+                      ),
                     ),
                     Spacer(),
                     GestureDetector(
@@ -48,26 +57,20 @@ class HomePageScreen extends ConsumerWidget {
                           decoration: InputDecoration(
                             suffixIcon: Icon(
                               CupertinoIcons.search,
-                              color: AppColors.iconColor,
+                              color: AppColors.iconColor(context),
                             ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: AppColors.borderColor,
-                              ),
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            contentPadding: EdgeInsets.all(0),
-                            border: OutlineInputBorder(
+                            hintText: "",
+                            contentPadding: EdgeInsets.zero,
+                            disabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(24),
                               borderSide: BorderSide(
-                                color: AppColors.borderColor,
-
+                                color: AppColors.borderColor(context), // change for disabled state
                                 width: 1,
                               ),
                             ),
-                            hintText: "",
                           ),
-                        ),
+                        )
+                        ,
                       ),
                       onTap: () {
                         ref.read(isSearchingProvider.notifier).state =
@@ -84,7 +87,7 @@ class HomePageScreen extends ConsumerWidget {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: AppColors.borderColor,
+                                color: AppColors.borderColor(context),
                                 width: 1,
                               ),
                             ),
@@ -92,6 +95,7 @@ class HomePageScreen extends ConsumerWidget {
                               'assets/images/ShoppingBag.png',
                               width: 24,
                               height: 24,
+                              color: AppColors.iconColor(context),
                             ),
                           ),
                           cartItems.isEmpty
@@ -127,9 +131,8 @@ class HomePageScreen extends ConsumerWidget {
                 margin: EdgeInsets.symmetric(vertical: 8),
                 padding: EdgeInsets.all(2),
                 decoration: BoxDecoration(
-                  color: Colors.white,
                   borderRadius: BorderRadius.circular(24),
-                  border: Border.all(color: AppColors.borderColor, width: 1),
+                  border: Border.all(color: AppColors.borderColor(context), width: 1),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -146,7 +149,7 @@ class HomePageScreen extends ConsumerWidget {
                           ),
                           child: Icon(
                             Icons.location_on_outlined,
-                            color: AppColors.iconColor,
+                            color: AppColors.iconColor(context),
                           ),
                         ),
                         SizedBox(width: 8),

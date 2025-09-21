@@ -17,36 +17,41 @@ class ProductItemScreen extends ConsumerWidget {
     final isFavorite = ref.watch(isFavoriteProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Product Details',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: GestureDetector(
-          child: Container(
-            padding: const EdgeInsets.all(11),
-            margin: const EdgeInsets.only(left: 8),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: AppColors.borderColor,
-                width: 1,
-              ),
-            ),
-            child: const Icon(Icons.arrow_back_ios_rounded),
-          ),
-          onTap: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
+
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(
+              margin: EdgeInsets.only(top: 24, left: 6),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Container(
+                      padding: EdgeInsets.all(11),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: AppColors.borderColor(context),
+                          width: 1,
+                        ),
+                      ),
+                      child: Icon(Icons.arrow_back_ios_rounded),
+                    ),
+                    onTap: () {
+                        Navigator.pop(context);
+                    },
+                  ),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.11,),
+                  Text(
+                    'Product Details',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(),
+                ],
+              ),
+            ),
             Container(
               margin: const EdgeInsets.all(24),
               child: Row(
@@ -80,7 +85,9 @@ class ProductItemScreen extends ConsumerWidget {
                   },
                   icon: Icon(
                     isFavorite ? Icons.favorite : Icons.favorite_border,
-                    color: isFavorite ? Colors.red : Colors.black,
+                    color: isFavorite
+                        ? Colors.red
+                        : Theme.of(context).iconTheme.color,
                   ),
                 ),
               ],

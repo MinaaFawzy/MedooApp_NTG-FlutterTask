@@ -14,15 +14,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
+      // System decides (light/dark)
+      themeMode: ThemeMode.system,
+
+      // Light theme
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+        ),
+      ),
+
+      // Dark theme
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.black,
+        primaryColor: Colors.black,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
+        ),
+      ),
+
       debugShowCheckedModeBanner: false,
       title: 'Modee',
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          primaryColor: Colors.black,
-          appBarTheme: const AppBarTheme(
-            scrolledUnderElevation: 0.0,
-          )
-      ),
 
       home:  BottomNavBar() ,
     ) ;
