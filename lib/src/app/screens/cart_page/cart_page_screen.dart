@@ -19,9 +19,7 @@ class CartPageScreen extends ConsumerWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: cartItems.isEmpty
-            ? Center(child: Text(loc.yourCartIsEmpty))
-            :Column(
+        child: Column(
           children: [
             // Cart List
             Container(
@@ -69,23 +67,34 @@ class CartPageScreen extends ConsumerWidget {
                 ],
               ),
             ),
-            Expanded(
-              child: ListView.separated(
-                        separatorBuilder:
-                            (context, index) => SizedBox(height: 8),
-                        itemCount: cartItems.length,
-                        itemBuilder: (context, index) {
-                          final item = cartItems[index];
-                          return Container(
-                            margin: EdgeInsets.symmetric(horizontal: 24),
-                            child: CartItemWidget(item: item),
-                          );
-                        },
-                      ),
-            ),
-            ShoppingInformationWidget(
-              cartItems: cartItems,
-              totalPrice: totalPrice,
+            cartItems.isEmpty
+                ? Column(
+                  children: [
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.35),
+                    Center(child: Text(loc.yourCartIsEmpty)),
+                  ],
+                )
+                :Column(
+              children: [
+                Expanded(
+                  child: ListView.separated(
+                            separatorBuilder:
+                                (context, index) => SizedBox(height: 8),
+                            itemCount: cartItems.length,
+                            itemBuilder: (context, index) {
+                              final item = cartItems[index];
+                              return Container(
+                                margin: EdgeInsets.symmetric(horizontal: 24),
+                                child: CartItemWidget(item: item),
+                              );
+                            },
+                          ),
+                ),
+                ShoppingInformationWidget(
+                  cartItems: cartItems,
+                  totalPrice: totalPrice,
+                ),
+              ],
             ),
           ],
         ),
