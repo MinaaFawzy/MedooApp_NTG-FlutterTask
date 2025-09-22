@@ -137,59 +137,62 @@ class HomePageScreen extends ConsumerWidget {
                   borderRadius: BorderRadius.circular(28),
                   border: Border.all(color: AppColors.borderColor(context), width: 1),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        // Location icon
-                        Container(
-                          width: 40,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0X1F1F1F0A),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          // Location icon
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0X1F1F1F0A),
+                            ),
+                            child: Icon(Icons.location_on_outlined,color: AppColors.iconColor(context),)
                           ),
-                          child: Icon(Icons.location_on_outlined,color: AppColors.iconColor(context),)
-                        ),
-                        SizedBox(width: 8),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              loc.sendTo,
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey,
+                          SizedBox(width: 8),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                loc.sendTo,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "Brisbane, Queensland",
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0XFF1F1F1F),
+                              Text(
+                                "Brisbane, Queensland",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: AppColors.borderColor(context),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.buttonColor,
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 8,
-                        ),
+                            ],
+                          ),
+                        ],
                       ),
-                      child: Text(loc.change),
-                    ),
-                  ],
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.buttonColor,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 8,
+                          ),
+                        ),
+                        child: Text(loc.change),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(

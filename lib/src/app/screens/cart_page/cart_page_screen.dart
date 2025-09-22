@@ -19,7 +19,9 @@ class CartPageScreen extends ConsumerWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: cartItems.isEmpty
+            ? Center(child: Text(loc.yourCartIsEmpty))
+            :Column(
           children: [
             // Cart List
             Container(
@@ -68,10 +70,7 @@ class CartPageScreen extends ConsumerWidget {
               ),
             ),
             Expanded(
-              child:
-                  cartItems.isEmpty
-                      ? Center(child: Text(loc.yourCartIsEmpty))
-                      : ListView.separated(
+              child: ListView.separated(
                         separatorBuilder:
                             (context, index) => SizedBox(height: 8),
                         itemCount: cartItems.length,
