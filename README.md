@@ -45,12 +45,21 @@ The app demonstrates clean architecture, state management, API integration, loca
     - It allows fine-grained control of state and dependency injection.
     - Scales better with Clean Architecture + MVVM compared to setState
 
-**🌍 Localization**
+- **🌍 Localization**
   - English (default)
   - Arabic (RTL support)
 -Easily extendable by adding translations in the l10n folder.
 
-**🌓 Theming**
+- **🌓 Theming**
   - Light & Dark mode supported out of the box.
   - System preference is detected automatically.
-  
+
+- **🚀 Setup Instructions**
+  - Clone this repo:
+    - git clone https://github.com/your-username/flutter-mini-ecommerce.git
+    - cd flutter-mini-ecommerce
+  - Install dependencies:
+    - flutter pub get
+  - Run the app:
+    - flutter run
+ 
