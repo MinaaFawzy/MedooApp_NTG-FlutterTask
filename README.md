@@ -22,7 +22,7 @@ The app demonstrates clean architecture, state management, API integration, loca
   - Clean Architecture with MVVM pattern
   - Separation of concerns: `data`, `domain`, `App`
 - **State Management**
-  - [Riverpod](https://riverpod.dev) + Provider
+  - [Riverpod](https://riverpod.dev) 
 - **API Integration**
   - Using [Dio](https://pub.dev/packages/dio) for HTTP requests
   - Products: `https://fakestoreapi.com/products`
@@ -34,7 +34,7 @@ The app demonstrates clean architecture, state management, API integration, loca
  
 - **⚙️ Tech Stack**  
   - Flutter (UI Framework)
-  - Riverpod + Provider (State Management)
+  - Riverpod (State Management)
   - Dio (Networking)
   - Flutter Secure Storage (Cart persistence)
   - MVVM + Clean Architecture (Scalable structure)
