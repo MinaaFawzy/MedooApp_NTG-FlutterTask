@@ -3,7 +3,7 @@
 A mini e-commerce Flutter application built as part of a technical task.  
 The app demonstrates clean architecture, state management, API integration, localization, theming, and cart functionality.
 ## 📱 Features
-<img src="AppScreens/HomeDEN.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
+<img src="AppScreens/HomeDEN.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeARW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/HomeD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
 <img src="AppScreens/AddToCartMessage.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/CartW.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/profileDetailsW1.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
 <img src="AppScreens/EmptyCart.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/productDetailsAR.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>  <img src="AppScreens/CartDetailsARD.jpg" alt="Welcome" width="260" height="600" style="border: 2px solid black;"/>
 ### ✅ Implemented
@@ -22,7 +22,7 @@ The app demonstrates clean architecture, state management, API integration, loca
   - Clean Architecture with MVVM pattern
   - Separation of concerns: `data`, `domain`, `App`
 - **State Management**
-  - [Riverpod](https://riverpod.dev) + Provider
+  - [Riverpod](https://riverpod.dev) 
 - **API Integration**
   - Using [Dio](https://pub.dev/packages/dio) for HTTP requests
   - Products: `https://fakestoreapi.com/products`
@@ -34,7 +34,7 @@ The app demonstrates clean architecture, state management, API integration, loca
  
 - **⚙️ Tech Stack**  
   - Flutter (UI Framework)
-  - Riverpod + Provider (State Management)
+  - Riverpod (State Management)
   - Dio (Networking)
   - Flutter Secure Storage (Cart persistence)
   - MVVM + Clean Architecture (Scalable structure)
@@ -45,12 +45,21 @@ The app demonstrates clean architecture, state management, API integration, loca
     - It allows fine-grained control of state and dependency injection.
     - Scales better with Clean Architecture + MVVM compared to setState
 
-**🌍 Localization**
+- **🌍 Localization**
   - English (default)
   - Arabic (RTL support)
 -Easily extendable by adding translations in the l10n folder.
 
-**🌓 Theming**
+- **🌓 Theming**
   - Light & Dark mode supported out of the box.
   - System preference is detected automatically.
-  
+
+- **🚀 Setup Instructions**
+  - Clone this repo:
+    - git clone https://github.com/your-username/flutter-mini-ecommerce.git
+    - cd flutter-mini-ecommerce
+  - Install dependencies:
+    - flutter pub get
+  - Run the app:
+    - flutter run
+ 
