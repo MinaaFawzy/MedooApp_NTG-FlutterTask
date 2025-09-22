@@ -50,7 +50,7 @@ class BottomNavBar extends ConsumerWidget {
               'assets/images/ShoppingBag.png',
               width: 24,
               height: 24,
-              color: Colors.white,
+              color: bottomIndex == 2 ?  Colors.white :Colors.black54,
             ),
             title: Text(loc.cart),
             activeColor: AppColors.buttonColor,

@@ -48,37 +48,40 @@ class HomePageScreen extends ConsumerWidget {
                       ),
                     ),
                     Spacer(),
-                    GestureDetector(
-                      child: SizedBox(
-                        width:
-                            isSearching
-                                ? MediaQuery.of(context).size.width * 0.43
-                                : 48,
-                        child: TextField(
-                          enabled: false,
-                          cursorColor: Colors.black,
-                          decoration: InputDecoration(
-                            suffixIcon: Icon(
-                              CupertinoIcons.search,
-                              color: AppColors.iconColor(context),
-                            ),
-                            hintText: "",
-                            contentPadding: EdgeInsets.zero,
-                            disabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(24),
-                              borderSide: BorderSide(
-                                color: AppColors.borderColor(context), // change for disabled state
-                                width: 1,
+                    Container(
+                      margin: const EdgeInsets.only(left: 4),
+                      child: GestureDetector(
+                        child: SizedBox(
+                          width:
+                              isSearching
+                                  ? MediaQuery.of(context).size.width * 0.4
+                                  : 48,
+                          child: TextField(
+                            enabled: false,
+                            cursorColor: Colors.black,
+                            decoration: InputDecoration(
+                              suffixIcon: Icon(
+                                CupertinoIcons.search,
+                                color: AppColors.iconColor(context),
+                              ),
+                              hintText: "",
+                              contentPadding: EdgeInsets.zero,
+                              disabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(24),
+                                borderSide: BorderSide(
+                                  color: AppColors.borderColor(context), // change for disabled state
+                                  width: 1,
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                        ,
+                          )
+                          ,
+                        ),
+                        onTap: () {
+                          ref.read(isSearchingProvider.notifier).state =
+                              !isSearching;
+                        },
                       ),
-                      onTap: () {
-                        ref.read(isSearchingProvider.notifier).state =
-                            !isSearching;
-                      },
                     ),
                     GestureDetector(
                       child: Stack(
