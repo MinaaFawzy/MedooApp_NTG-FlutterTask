@@ -30,7 +30,13 @@ class BottomNavBar extends ConsumerWidget {
         selectedIndex: ref.watch(bottomIndexProvider),
         items: <BottomBarItem>[
           BottomBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(
+              Icons.home_outlined,
+              color:
+                  bottomIndex == 0
+                      ? Colors.white
+                      : AppColors.bottomIconColor(context),
+            ),
             title: Text(loc.home),
             activeColor: AppColors.buttonColor,
             activeIconColor: Colors.white,
@@ -38,7 +44,13 @@ class BottomNavBar extends ConsumerWidget {
             backgroundColorOpacity: 1,
           ),
           BottomBarItem(
-            icon: Icon(Icons.favorite_border),
+            icon: Icon(
+              Icons.favorite_border,
+              color:
+                  bottomIndex == 1
+                      ? Colors.white
+                      : AppColors.bottomIconColor(context),
+            ),
             title: Text(loc.favorite),
             activeColor: AppColors.buttonColor,
             activeIconColor: Colors.white,
@@ -50,7 +62,10 @@ class BottomNavBar extends ConsumerWidget {
               'assets/images/ShoppingBag.png',
               width: 24,
               height: 24,
-              color: bottomIndex == 2 ?  Colors.white :Colors.black54,
+              color:
+                  bottomIndex == 2
+                      ? Colors.white
+                      : AppColors.bottomIconColor(context),
             ),
             title: Text(loc.cart),
             activeColor: AppColors.buttonColor,
@@ -59,7 +74,13 @@ class BottomNavBar extends ConsumerWidget {
             backgroundColorOpacity: 1,
           ),
           BottomBarItem(
-            icon: Icon(Icons.person_2_outlined),
+            icon: Icon(
+              Icons.person_2_outlined,
+              color:
+                  bottomIndex == 3
+                      ? Colors.white
+                      : AppColors.bottomIconColor(context),
+            ),
             title: Text(loc.profile),
             activeColor: AppColors.buttonColor,
             activeIconColor: Colors.white,

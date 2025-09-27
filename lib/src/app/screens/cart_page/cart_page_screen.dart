@@ -74,28 +74,30 @@ class CartPageScreen extends ConsumerWidget {
                     Center(child: Text(loc.yourCartIsEmpty)),
                   ],
                 )
-                :Column(
-              children: [
-                Expanded(
-                  child: ListView.separated(
-                            separatorBuilder:
-                                (context, index) => SizedBox(height: 8),
-                            itemCount: cartItems.length,
-                            itemBuilder: (context, index) {
-                              final item = cartItems[index];
-                              return Container(
-                                margin: EdgeInsets.symmetric(horizontal: 24),
-                                child: CartItemWidget(item: item),
-                              );
-                            },
-                          ),
+                :Expanded(
+                  child: Column(
+                                children: [
+                  Expanded(
+                    child: ListView.separated(
+                      separatorBuilder:
+                          (context, index) => SizedBox(height: 8),
+                      itemCount: cartItems.length,
+                      itemBuilder: (context, index) {
+                        final item = cartItems[index];
+                        return Container(
+                          margin: EdgeInsets.symmetric(horizontal: 24),
+                          child: CartItemWidget(item: item),
+                        );
+                      },
+                    ),
+                  ),
+                  ShoppingInformationWidget(
+                    cartItems: cartItems,
+                    totalPrice: totalPrice,
+                  ),
+                                ],
+                              ),
                 ),
-                ShoppingInformationWidget(
-                  cartItems: cartItems,
-                  totalPrice: totalPrice,
-                ),
-              ],
-            ),
           ],
         ),
       ),
